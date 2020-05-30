@@ -21,6 +21,7 @@ _start:
     mov edx,    14  ; number of bytes to write - one for each letter plus 0Ah (line feed character)
     int 80h
 
+    ;; exit
     mov eax,    1   ; sys_exit
     mov ebx,    0   ; return - exit status 0
     int 80h
