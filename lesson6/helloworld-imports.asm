@@ -8,8 +8,8 @@
 %include        'functions.asm'
 
 SECTION .data
-msg1    db      'Hello, brave new World!', 0Ah
-msg2    db      'This is how we recycle code in NASM.', 0Ah
+msg1    db      'Hello, brave new World!', 0Ah, 00h
+msg2    db      'This is how we recycle code in NASM.', 0Ah, 00h
 
 
 SECTION .text
