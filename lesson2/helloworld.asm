@@ -14,8 +14,13 @@ global _start
 
 _start:
 
+    ;; print hello world
     mov eax,    4   ; sys_write
     mov ebx,    1   ; file number - in this case stdout
     mov ecx,    msg ; move the memory address of our message string into ecx
     mov edx,    14  ; number of bytes to write - one for each letter plus 0Ah (line feed character)
+    int 80h
+
+    mov eax,    1   ; sys_exit
+    mov ebx,    0   ; return - exit status 0
     int 80h
